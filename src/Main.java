@@ -7,11 +7,16 @@ public class Main {
 
         while (true) {
             Person p = attractionQueue.poll();
-            if (p == null) break;                           // Проверка на наличие следующего элемента в очереди
-            if (p.ticketsAmount == 0) continue;             // Есть ли ещё билеты у посетителя
-                p.ticketsAmount--;
-                System.out.println("Прокатился на аттракционе " + p);
-                attractionQueue.offer(p);                   // Добавление в очередь, если остались билеты
+
+            if (p == null) break;                                 // Проверка на наличие следующего элемента в очереди
+
+            if (p.ticketsAmount == 0) continue;                   // Есть ли ещё билеты у посетителя
+
+            p.ticketsAmount--;                                    // Уменьшение количества билетов после посещения
+
+            System.out.println("Прокатился на аттракционе " + p); // Вывод сообщения о том кто посетил аттракцион
+
+            attractionQueue.offer(p);                             // Добавление в очередь, если остались билеты
             }
         }
 

@@ -1,8 +1,8 @@
 public  class Person {
 
-    public String name;
-    public String sureName;
-    public int ticketsAmount;
+    protected String name;
+    protected String sureName;
+    protected int ticketsAmount;
 
     public Person(String name, String sureName, int ticketsAmount){
         this.name = name;
