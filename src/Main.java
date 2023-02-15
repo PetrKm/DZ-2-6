@@ -17,8 +17,8 @@ public class Main {
             System.out.println("Прокатился на аттракционе " + p); // Вывод сообщения о том кто посетил аттракцион
 
             attractionQueue.offer(p);                             // Добавление в очередь, если остались билеты
-            }
         }
+    }
 
     public static LinkedList<Person> generateClients() {
 
